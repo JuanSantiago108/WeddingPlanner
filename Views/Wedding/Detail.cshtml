@@ -1,0 +1,12 @@
+@model Wedding
+
+<h1>@Model.WedderOne and @Model.WedderTwo Wedding</h1>
+
+<h3>Date: @Model.Date</h3>
+
+
+<h3>Guests:</h3>
+@foreach (Association assoc in Model.Attendees )
+{
+    <p>@assoc.User.FirstName @assoc.User.LastName</p>
+}
